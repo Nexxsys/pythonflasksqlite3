@@ -1,0 +1,36 @@
+# /usr/bin/python3
+# Python 3 - Prerequisites
+sudo apt-get install python-pip
+sudo apt-get install npm
+# Install sdlite 3
+sudo apt-get install sqlite3
+# pip base installs
+pip install virtualenv
+pip install --upgrade pip
+
+# create the virtual environment
+# http://docs.python-guide.org/en/latest/dev/virtualenvs/
+virtualenv -p /usr/bin/python3 pythonflasksqlite3
+source pythonflasksqlite3/bin/activate
+cd pythonflasksqlite3
+git init ./pythonflasksqlite3
+
+# Create Sqlite Database
+sqlite3 emails.db
+
+# Install Flask
+pip install Flask
+
+# Create Table
+python
+import sqlite3
+conn = sqlite3.connect("emails.db")
+cursor = conn.cursor()
+cursor.execute("CREATE TABLE email_addresses ( email TEXT );")
+exit()
+
+# When you are done with the environment (virt)
+deactivate
+
+
+#
