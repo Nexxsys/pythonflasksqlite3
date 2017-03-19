@@ -2,7 +2,7 @@
 # Python 3 - Prerequisites
 sudo apt-get install python-pip
 sudo apt-get install npm
-# Install sdlite 3
+# Install sqlite 3
 sudo apt-get install sqlite3
 # pip base installs
 pip install virtualenv
